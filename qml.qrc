@@ -22,5 +22,6 @@
         <file>shared/AreaBoundaries.qml</file>
         <file>ActionButton.qml</file>
         <file>ControlColumn.qml</file>
+        <file>ControlRow.qml</file>
     </qresource>
 </RCC>
