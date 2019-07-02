@@ -50,7 +50,7 @@ Rectangle {
                 return('#daa520')
             }
             else {
-                return(Qt.rgba(red - ind * 0.04, green - ind * 0.03, blue - ind * 0.04, 1))
+                return(Qt.rgba(red - ind * 0.02, green - ind * 0.02, blue - ind * 0.02, 1))
             }
         }
 
@@ -101,7 +101,7 @@ Rectangle {
             return('#EEA107')
         }
         else {
-            return(Qt.rgba(red - 0.08 - ind * 0.05, green - 0.1 - ind * 0.03, blue - 0.08 - ind * 0.07, 1))
+            return(Qt.rgba(red - 0.08 - ind * 0.04, green - 0.1 - ind * 0.04, blue - 0.08 - ind * 0.04, 1))
         }
 
     }
@@ -111,7 +111,7 @@ Rectangle {
             return('#D79207')
         }
         else {
-            return(Qt.rgba(red - 0.16 - ind * 0.05, green - 0.2 - ind * 0.03, blue - 0.16 - ind * 0.07, 1))
+            return(Qt.rgba(red - 0.16 - ind * 0.05, green - 0.2 - ind * 0.05, blue - 0.16 - ind * 0.05, 1))
         }
 
     }

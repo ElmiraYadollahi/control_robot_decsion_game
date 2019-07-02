@@ -63,14 +63,19 @@ Rectangle {
                                     "DIREC , the LEFT",
                                     "DIREC , the RIGHT",
 
+                                    "RESET , Let me ",
+                                    "RESET , I am going ",
+
                                     "STAT , Can you  ",
                                     "STAT , Can you  ",
                                     "STAT , Can you  ",
                                     "RESP , Now , what ",
                                     "RESP , That's exactly",
                                     "RESP , I am not sure ",
-                                    "RESET , Let me ",
-                                    "RESET , I am going "]
+
+                                    "LEVEL , EASY",
+                                    "LEVEL , MEDIUM",
+                                    "LEVEL , HARD"]
 
     property variant secondMovementText: ["LOOK AT CHILD , Is this , X , ?",
                                     "LOOK AT ABACUS , It shows , X , ",
