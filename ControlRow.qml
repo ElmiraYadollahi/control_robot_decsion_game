@@ -28,7 +28,7 @@ Rectangle {
     function colorSelection(ind, red, green, blue){
         if (box_index === 0 | box_index === 1){
 
-            if (ind === 2 | ind === 24){
+            if (ind === 2 | ind === 24 | ind === 25){
                 return('red')
             }
             else if (ind === 3 ){
@@ -302,6 +302,21 @@ Rectangle {
                         title: titles[box_index]
                     }
                 }
+            }
+
+            ActionButton{
+                id: row8n
+                x: titleHeight * 5/2  + buttonWidth * 2
+                y: titleHeight * 9/2 + 55
+                width: buttonWidth * 1/3
+                height: buttonHeight
+                color: colorSelection(25, red, green, blue)
+                hoverColor: hoverColorSelection(25, red, green, blue)
+                pressColor: pressColorSelection(25, red, green, blue)
+                buttonText: texMex [25]
+                columnNum: box_index
+                columnTitle: titles
+                title: titles[box_index]
             }
 
 

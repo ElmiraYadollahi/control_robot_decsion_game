@@ -38,12 +38,14 @@ Rectangle {
                                     "STAT , Which object?",
                                     "STAT , Which direction?",
 
-                                    "RESET , reset",
+                                    "RANDOMIZE , randomize",
                                     "COLLECT , collect",
 
-                                    "EASY",
-                                    "MEDIUM",
-                                    "HARD"]
+                                    "LEVEL , EASY",
+                                    "LEVEL , MEDIUM",
+                                    "LEVEL , HARD",
+
+                                    "EMPTY"]
 
     property variant movementText: ["SETUP , robot_trun",
                                     "STAT , are you ready?",
@@ -58,13 +60,15 @@ Rectangle {
 
                                     "DIREC , robot LEFT",
                                     "DIREC , robot RIGHT",
+
                                     "DIREC , child LEFT",
                                     "DIREC , child RIGHT ",
+
                                     "DIREC , the LEFT",
                                     "DIREC , the RIGHT",
 
-                                    "RESET , Let me ",
-                                    "RESET , I am going ",
+                                    "RANDOMIZE , Let me ",
+                                    "RANDOMIZE , I am going ",
 
                                     "STAT , Can you  ",
                                     "STAT , Can you  ",
@@ -75,7 +79,9 @@ Rectangle {
 
                                     "LEVEL , EASY",
                                     "LEVEL , MEDIUM",
-                                    "LEVEL , HARD"]
+                                    "LEVEL , HARD",
+
+                                    "EMPTY",]
 
     property variant secondMovementText: ["LOOK AT CHILD , Is this , X , ?",
                                     "LOOK AT ABACUS , It shows , X , ",
