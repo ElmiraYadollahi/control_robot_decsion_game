@@ -11,12 +11,12 @@ Rectangle {
     property real tolerence: 2
     property real recwidth: controlArea.width - 20 - controlArea.width/10
     property real recheight: controlArea.height/(nbRows)
-    property variant speakingText: ["SETUP , child_trun",
+    property variant speakingText: ["SETUP , child_instruct",
                                     "STAT , I am ready",
 
+                                    "COLOR , yellow",
                                     "COLOR , red",
                                     "COLOR , blue",
-                                    "COLOR , yellow",
 
                                     "OBJECT , ball",
                                     "OBJECT , square",
@@ -33,13 +33,21 @@ Rectangle {
 
                                     "ACTION , action",
                                     "NEXT , next instruction",
+
+                                    "RANDOMIZE , randomize",
+                                    "COLLECT , collect",
+
                                     "STAT , What color?",
                                     "STAT , How many?",
                                     "STAT , Which object?",
                                     "STAT , Which direction?",
+                                    "STAT , Which right?",
+                                    "STAT , Which left?",
+                                    "STAT , Who's right?",
+                                    "STAT , Who's left?",
 
-                                    "RANDOMIZE , randomize",
-                                    "COLLECT , collect",
+
+
 
                                     "LEVEL , EASY",
                                     "LEVEL , MEDIUM",
@@ -47,12 +55,13 @@ Rectangle {
 
                                     "EMPTY"]
 
-    property variant movementText: ["SETUP , robot_trun",
+    property variant movementText: ["SETUP , robot_instruct",
                                     "STAT , are you ready?",
 
+                                    "COLOR , yellow",
                                     "COLOR , red",
                                     "COLOR , blue",
-                                    "COLOR , yellow",
+
 
                                     "OBJECT , ball",
                                     "OBJECT , square",
@@ -67,21 +76,29 @@ Rectangle {
                                     "DIREC , the LEFT",
                                     "DIREC , the RIGHT",
 
-                                    "RANDOMIZE , Let me ",
-                                    "RANDOMIZE , I am going ",
+                                    "ACTION , action",
+                                    "NEXT , next instruction",
 
-                                    "STAT , Can you  ",
-                                    "STAT , Can you  ",
-                                    "STAT , Can you  ",
-                                    "RESP , Now , what ",
-                                    "RESP , That's exactly",
-                                    "RESP , I am not sure ",
+                                    "RANDOMIZE , randomize",
+                                    "COLLECT , collect",
+
+                                    "STAT , Should I Repeat?  ",
+                                    "REPEAT , Repeat  ",
+                                    "STAT , Was it clear?  ",
+                                    "STAT , Sure ",
+                                    "CORRECT , Egocentric",
+                                    "CORRECT , Addresee-Centric",
+                                    "STAT , Yes",
+                                    "STAT , No",
+
+                                    //"RESP , That's exactly",
+                                    //"RESP , I am not sure ",
 
                                     "LEVEL , EASY",
                                     "LEVEL , MEDIUM",
                                     "LEVEL , HARD",
 
-                                    "EMPTY",]
+                                    "EMPTY"]
 
     property variant secondMovementText: ["LOOK AT CHILD , Is this , X , ?",
                                     "LOOK AT ABACUS , It shows , X , ",

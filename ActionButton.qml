@@ -27,11 +27,11 @@ Item {
     onClicked:{
         //button_contentPublisher.text = '' + buttonText
         //console.log(title)
-        if (title == "Child_Turn"){
+        if (title == "Child_Instruct"){
             button_clickedPublisher.text = 'true'
             button_childTurnPublisher.text = '' + title + ' , ' + buttonText
         }
-        if (title == "Robot_Turn"){
+        if (title == "Robot_Instruct"){
             button_clickedPublisher.text = 'true'
             button_robotTurnPublisher.text = '' + title + ' , ' + buttonText
         }

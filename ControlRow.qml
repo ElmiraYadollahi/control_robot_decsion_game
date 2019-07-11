@@ -22,31 +22,38 @@ Rectangle {
     property real red
     property real green
     property real blue
-    property variant titles: [  "Child_Turn",
-                                "Robot_Turn",
+    property variant titles: [  "Child_Instruct",
+                                "Robot_Instruct",
                                 "Extra_Behavior"]
     function colorSelection(ind, red, green, blue){
         if (box_index === 0 | box_index === 1){
 
-            if (ind === 2 | ind === 24 | ind === 25){
+            if (ind === 3 | ind === 28 | ind === 29){
                 return('red')
             }
-            else if (ind === 3 ){
+            else if (ind === 4 ){
                 return('blue')
             }
-            else if (ind === 4 | ind === 23){
+            else if (ind === 2 | ind === 27){
                 return('#ffa600')
+            }
+
+            else if (ind === 5 | ind === 6 | ind === 7){
+                return('#808000')
             }
             else if (ind >= 14 & ind < 16){
                 return('#00008b')
             }
-            else if (ind >= 16 & ind < 22){
+            else if (ind >= 16 & ind < 18){
+                return('#00ced1')
+            }
+            else if (ind >= 18 & ind < 26){
                 return('#955196')
             }
-            else if (ind === 22){
+            else if (ind === 26){
                 return('#008000')
             }
-            else if (ind >= 22){
+            else if (ind >= 26){
                 return('#daa520')
             }
             else {
@@ -131,6 +138,7 @@ Rectangle {
             id: title
             width: controlArea.width /(nbRows) - 10
             height: titleHeight
+            //color: Qt.rgba(red - 1 * 0.02, green - 1 * 0.02, blue - 1 * 0.02, 1)
             color: 'grey'
 
             Text {
@@ -170,7 +178,7 @@ Rectangle {
         Row{
             spacing: 5
             x: titleHeight * 1/2
-            y: titleHeight * 5/2 + 10
+            y: titleHeight * 5/2 + 20
             Repeater{
                 id: row2
                 model:3
@@ -192,7 +200,7 @@ Rectangle {
             Row{
                 spacing: 5
                 x: titleHeight * 1/2
-                y: titleHeight * 7/2 + 20
+                y: titleHeight * 7/2 + 30
                 Repeater{
                     id: row3
                     model:3
@@ -215,7 +223,7 @@ Rectangle {
             Grid{
                 spacing: 5
                 x: titleHeight * 1/2
-                y: titleHeight * 9/2 + 30
+                y: titleHeight * 9/2 + 40
                 rows: 3; columns: 2
                 Repeater{
                     id: row4
@@ -258,14 +266,13 @@ Rectangle {
                 }
             }
 
-            Grid{
+            Row{
                 spacing: 5
                 x: titleHeight * 5/2  + buttonWidth * 3
                 y: titleHeight * 5/2 + 20
-                rows: 3; columns: 2
                 Repeater{
                     id: row6
-                    model:6
+                    model:2
                     ActionButton{
                         id: row6n
                         width: buttonWidth * 2/3
@@ -281,22 +288,45 @@ Rectangle {
                 }
             }
 
+            Grid{
+                spacing: 5
+                x: titleHeight * 5/2  + buttonWidth * 3
+                y: titleHeight * 7/2 + 40
+                rows: 4; columns: 2
+                Repeater{
+                    id: row7
+                    model:8
+                    ActionButton{
+                        id: row7n
+                        width: buttonWidth * 2/3
+                        height: buttonHeight
+                        color: colorSelection(index+18, red, green, blue)
+                        hoverColor: hoverColorSelection(index+18, red, green, blue)
+                        pressColor: pressColorSelection(index+18, red, green, blue)
+                        buttonText: texMex [index+18]
+                        columnNum: box_index
+                        columnTitle: titles
+                        title: titles[box_index]
+                    }
+                }
+            }
+
 
             Row{
                 spacing: 5
                 x: titleHeight * 5/2  + buttonWidth * 3
-                y: titleHeight * 11/2 + 55
+                y: titleHeight * 15/2 + 70
                 Repeater{
-                    id: row7
+                    id: row8
                     model:3
                     ActionButton{
-                        id: row7n
+                        id: row8n
                         width: buttonWidth * 1/2
                         height: buttonHeight
-                        color: colorSelection(index+22, red, green, blue)
-                        hoverColor: hoverColorSelection(index+22, red, green, blue)
-                        pressColor: pressColorSelection(index+22, red, green, blue)
-                        buttonText: texMex [index+22]
+                        color: colorSelection(index+26, red, green, blue)
+                        hoverColor: hoverColorSelection(index+26, red, green, blue)
+                        pressColor: pressColorSelection(index+26, red, green, blue)
+                        buttonText: texMex [index+26]
                         columnNum: box_index
                         columnTitle: titles
                         title: titles[box_index]
@@ -305,15 +335,15 @@ Rectangle {
             }
 
             ActionButton{
-                id: row8n
+                id: row9n
                 x: titleHeight * 5/2  + buttonWidth * 2
-                y: titleHeight * 9/2 + 55
+                y: titleHeight * 9/2 + 75
                 width: buttonWidth * 1/3
                 height: buttonHeight
-                color: colorSelection(25, red, green, blue)
-                hoverColor: hoverColorSelection(25, red, green, blue)
-                pressColor: pressColorSelection(25, red, green, blue)
-                buttonText: texMex [25]
+                color: colorSelection(29, red, green, blue)
+                hoverColor: hoverColorSelection(29, red, green, blue)
+                pressColor: pressColorSelection(29, red, green, blue)
+                buttonText: texMex [29]
                 columnNum: box_index
                 columnTitle: titles
                 title: titles[box_index]
