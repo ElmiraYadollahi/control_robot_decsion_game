@@ -18,7 +18,7 @@ Rectangle {
                                     "COLOR , red",
                                     "COLOR , blue",
 
-                                    "OBJECT , ball",
+                                    "OBJECT , circle",
                                     "OBJECT , square",
                                     "OBJECT , object",
 
@@ -34,8 +34,8 @@ Rectangle {
                                     "ACTION , action",
                                     "NEXT , next instruction",
 
-                                    "RANDOMIZE , randomize",
-                                    "COLLECT , collect",
+                                    "STAT , I thinl I reach the goal",
+                                    "STAT , I think we lost",
 
                                     "STAT , What color?",
                                     "STAT , How many?",
@@ -58,26 +58,43 @@ Rectangle {
     property variant movementText: ["SETUP , robot_instruct",
                                     "STAT , are you ready?",
 
-                                    "COLOR , yellow",
-                                    "COLOR , red",
-                                    "COLOR , blue",
+                                    //"COLOR , yellow",
+                                    //"COLOR , red",
+                                    //"COLOR , blue",
 
 
-                                    "OBJECT , ball",
-                                    "OBJECT , square",
-                                    "OBJECT , object",
+                                    //"OBJECT , circle",
+                                    //"OBJECT , square",
+                                    //"OBJECT , object",
 
-                                    "DIREC , robot LEFT",
-                                    "DIREC , robot RIGHT",
+                                    //"DIREC , robot LEFT",
+                                    //"DIREC , robot RIGHT",
 
-                                    "DIREC , child LEFT",
-                                    "DIREC , child RIGHT ",
+                                    //"DIREC , child LEFT",
+                                    //"DIREC , child RIGHT ",
 
-                                    "DIREC , the LEFT",
-                                    "DIREC , the RIGHT",
+                                    //"DIREC , the LEFT",
+                                    //"DIREC , the RIGHT",
+
+                                    "LEVEL , EASY",
+                                    "LEVEL , MEDIUM",
+                                    "LEVEL , HARD",
+
+                                    "GOAL , E1",
+                                    "GOAL , E2",
+
+                                    "GOAL , M1",
+                                    "GOAL , M2",
+                                    "GOAL , M3",
+                                    "GOAL , M4",
+                                    "GOAL , M5",
+                                    "GOAL , M6",
+                                    "GOAL , M7",
+                                    "GOAL , M8",
 
                                     "ACTION , action",
-                                    "NEXT , next instruction",
+                                    "STOP , stop",
+                                    "FINISH , finish",
 
                                     "RANDOMIZE , randomize",
                                     "COLLECT , collect",
@@ -90,13 +107,11 @@ Rectangle {
                                     "CORRECT , Addresee-Centric",
                                     "STAT , Yes",
                                     "STAT , No",
+                                    "STAT , No",
 
                                     //"RESP , That's exactly",
                                     //"RESP , I am not sure ",
 
-                                    "LEVEL , EASY",
-                                    "LEVEL , MEDIUM",
-                                    "LEVEL , HARD",
 
                                     "EMPTY"]
 
@@ -165,7 +180,7 @@ Rectangle {
         blue: 0.41
     }
 
-    ControlRow {
+    ControlColumn {
         id: bottom_row
         box_index: 1
         color: 'transparent'

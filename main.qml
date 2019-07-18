@@ -8,7 +8,7 @@ import Box2D 2.0
 Window {
     id:window
     visible: true
-    width: Screen.width * 6/10
+    width: Screen.width * 7/12
     height: Screen.height
     title: qsTr("CONTROL PANEL")
 
