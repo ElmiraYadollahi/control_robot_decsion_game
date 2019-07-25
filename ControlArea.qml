@@ -11,71 +11,128 @@ Rectangle {
     property real tolerence: 2
     property real recwidth: controlArea.width - 20 - controlArea.width/10
     property real recheight: controlArea.height/(nbRows)
-    property variant speakingText: ["SETUP , child_trun",
-                                    "STAT , I am ready",
+    property variant speakingText: ["SETUP , crianca_instrucao",
+                                    "STAT , Estou pronto",
 
-                                    "COLOR , red",
-                                    "COLOR , blue",
-                                    "COLOR , yellow",
+                                    "COLOR , amarelo",
+                                    "COLOR , vermelho",
+                                    //"COLOR , azul",
 
-                                    "OBJECT , ball",
-                                    "OBJECT , square",
-                                    "OBJECT , object",
+                                    "OBJECT , circulo",
+                                    "OBJECT , quadrado",
+                                    //"OBJECT , objecto",
 
-                                    "DIREC , robot LEFT",
-                                    "DIREC , robot RIGHT",
+                                    "DIREC , a minha ESQUERDA",
+                                    "DIREC , a minha DIREITA",
 
-                                    "DIREC , child LEFT",
-                                    "DIREC , child RIGHT ",
+                                    "DIREC , a tua ESQUERDA",
+                                    "DIREC , a tua DIREITA",
 
-                                    "DIREC , the LEFT",
-                                    "DIREC , the RIGHT",
+                                    "DIREC , a ESQUERDA",
+                                    "DIREC , a DIREITA",
 
-                                    "ACTION , action",
-                                    "NEXT , next instruction",
-                                    "STAT , What color?",
-                                    "STAT , How many?",
-                                    "STAT , Which object?",
-                                    "STAT , Which direction?",
+                                    //"ACTION , accao",
+                                    //"NEXT , proxima instrucao",
 
-                                    "RESET , reset",
-                                    "COLLECT , collect",
+                                    "RANDOMIZE , Aleatorizar",
+                                    "COLLECT , recolher",
 
-                                    "EASY",
-                                    "MEDIUM",
-                                    "HARD"]
+                                    "STAT , Acho que atingi o objectivo",
+                                    "STAT , Não consigo advinhar",
+                                    "STAT , Agora é a minha vez ",
 
-    property variant movementText: ["SETUP , robot_trun",
-                                    "STAT , are you ready?",
+                                    "STAT , Que cor?",
+                                    //"STAT , Quantos?",
+                                    "STAT , Que objecto?",
+                                    "STAT , Em que direccao?",
+                                    //"STAT , Which right?",
+                                    //"STAT , Which left?",
+                                    //"STAT , Who's right?",
+                                    //"STAT , Who's left?",
 
-                                    "COLOR , red",
-                                    "COLOR , blue",
-                                    "COLOR , yellow",
 
-                                    "OBJECT , ball",
-                                    "OBJECT , square",
-                                    "OBJECT , object",
 
-                                    "DIREC , robot LEFT",
-                                    "DIREC , robot RIGHT",
-                                    "DIREC , child LEFT",
-                                    "DIREC , child RIGHT ",
-                                    "DIREC , the LEFT",
-                                    "DIREC , the RIGHT",
 
-                                    "RESET , Let me ",
-                                    "RESET , I am going ",
+                                    "LEVEL , FACIL",
+                                    "LEVEL , MEDIO",
+                                    "LEVEL , DIFICIL",
 
-                                    "STAT , Can you  ",
-                                    "STAT , Can you  ",
-                                    "STAT , Can you  ",
-                                    "RESP , Now , what ",
-                                    "RESP , That's exactly",
-                                    "RESP , I am not sure ",
+                                    "VAZIO , ",
+                                    "INTRODUCTION , "]
 
-                                    "LEVEL , EASY",
-                                    "LEVEL , MEDIUM",
-                                    "LEVEL , HARD"]
+    property variant movementText: ["SETUP , robot_instrucao",
+                                    "STAT , estás pronto?",
+
+                                    //"COLOR , yellow",
+                                    //"COLOR , red",
+                                    //"COLOR , blue",
+
+
+                                    //"OBJECT , circle",
+                                    //"OBJECT , square",
+                                    //"OBJECT , object",
+
+                                    //"DIREC , robot LEFT",
+                                    //"DIREC , robot RIGHT",
+
+                                    //"DIREC , child LEFT",
+                                    //"DIREC , child RIGHT ",
+
+                                    //"DIREC , the LEFT",
+                                    //"DIREC , the RIGHT",
+
+
+                                    "GOAL , E1",
+                                    "GOAL , E2",
+
+                                    "GOAL , M1",
+                                    "GOAL , M2",
+                                    "GOAL , M3",
+                                    "GOAL , M4",
+                                    "GOAL , M5",
+                                    "GOAL , M6",
+                                    "GOAL , M7",
+                                    "GOAL , M8",
+
+                                    "RANDOMIZE , Aleatorizar",
+                                    "COLLECT , recolher",
+
+                                    "REPEAT , Repeat",
+                                    "CLARIFY , Clarify",
+                                    "STOP , Pare",
+
+
+
+                                    "STAT , queres que repita?",
+                                    "STAT , queres que repita?",
+                                    "STAT , acabaste?",
+                                    "STAT , claro que sim!",
+                                    "STAT , Sim",
+                                    "STAT , Não",
+
+                                    "RESULT , Correct",
+                                    "RESULT , Wrong",
+
+
+
+                                    //"RESP , That's exactly",
+                                    //"RESP , I am not sure ",
+
+                                    "LEVEL , FACIL",
+                                    "LEVEL , MEDIO",
+                                    "LEVEL , DIFICIL",
+                                    "STAT , acho que ganhei",
+                                    "STAT , acho que perdi",
+
+                                    "EMOTION , Happy",
+                                    "EMOTION , Sad",
+
+
+                                    "VAZIO , ",
+                                    "GOODBYE , "
+
+                                    ]
+
 
     property variant secondMovementText: ["LOOK AT CHILD , Is this , X , ?",
                                     "LOOK AT ABACUS , It shows , X , ",
@@ -142,7 +199,7 @@ Rectangle {
         blue: 0.41
     }
 
-    ControlRow {
+    ControlColumn{
         id: bottom_row
         box_index: 1
         color: 'transparent'

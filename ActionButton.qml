@@ -27,16 +27,22 @@ Item {
     onClicked:{
         //button_contentPublisher.text = '' + buttonText
         //console.log(title)
-        if (title == "Child_Turn"){
+        if (title === "Child_Instruct_pt"){
             button_clickedPublisher.text = 'true'
             button_childTurnPublisher.text = '' + title + ' , ' + buttonText
         }
-        if (title == "Robot_Turn"){
+        if (title === "Robot_Instruct_pt"){
             button_clickedPublisher.text = 'true'
             button_robotTurnPublisher.text = '' + title + ' , ' + buttonText
         }
-        if (title == "Extra_Behavior"){
+        if (title === "Extra_Behavior"){
             button_numberPublisher.text = '' + title + ' , ' + buttonText
+        }
+        if (buttonText === "REPEAT , Repeat" | buttonText === "CLARIFY , Clarify" | buttonText === "STOP , Pare"){
+            button_repeatPublisher.text = '' + buttonText
+        }
+        if (buttonText === "STAT , queres que repita?" | buttonText === "STAT , queres que repita?" | buttonText === "STAT , acabaste?"){
+            button_repeatPublisher.text = '' + buttonText
         }
     }
 
@@ -48,6 +54,11 @@ Item {
     RosStringPublisher {
         id: button_childTurnPublisher
         topic: "control/button/content"
+    }
+
+    RosStringPublisher {
+        id: button_repeatPublisher
+        topic: "control/button/repeat"
     }
 
     RosStringPublisher {
