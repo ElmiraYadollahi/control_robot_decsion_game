@@ -27,13 +27,13 @@ Item {
     onClicked:{
         //button_contentPublisher.text = '' + buttonText
         //console.log(title)
-        if (title === "Child_Instruct_pt"){
+        if (title === "Child_Instruct_pt" | title === "Introduction" | title === "Practice" | title === "Dialogue" | title === "Feedback" | title === "Instruction"){
             button_clickedPublisher.text = 'true'
-            button_childTurnPublisher.text = '' + title + ' , ' + buttonText
+            button_childTurnPublisher.text = '' + "Child_Instruct_pt" + ' , ' + buttonText
         }
-        if (title === "Robot_Instruct_pt"){
+        if (title === "Robot_Instruct_pt" | title === "Goal" | title === "Interference" | title === "Dialogue2" | title === "Feedback2" | title ==="game"){
             button_clickedPublisher.text = 'true'
-            button_robotTurnPublisher.text = '' + title + ' , ' + buttonText
+            button_robotTurnPublisher.text = '' + "Robot_Instruct_pt" + ' , ' + buttonText
         }
         if (title === "Extra_Behavior"){
             button_numberPublisher.text = '' + title + ' , ' + buttonText
@@ -43,6 +43,9 @@ Item {
         }
         if (buttonText === "STAT , queres que repita?" | buttonText === "STAT , queres que repita?" | buttonText === "STAT , acabaste?"){
             button_repeatPublisher.text = '' + buttonText
+        }
+        if (buttonText === "RESULT , YES"){
+            button_feedbackPublisher.text = '' + buttonText
         }
     }
 
@@ -59,6 +62,11 @@ Item {
     RosStringPublisher {
         id: button_repeatPublisher
         topic: "control/button/repeat"
+    }
+
+    RosStringPublisher {
+        id: button_feedbackPublisher
+        topic: "control/short/feedback"
     }
 
     RosStringPublisher {

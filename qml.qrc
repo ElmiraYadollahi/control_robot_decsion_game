@@ -23,5 +23,18 @@
         <file>ActionButton.qml</file>
         <file>ControlColumn.qml</file>
         <file>ControlRow.qml</file>
+        <file>Box1Introduction.qml</file>
+        <file>Box2Practice.qml</file>
+        <file>Box3Instruction.qml</file>
+        <file>Box4Dialogue.qml</file>
+        <file>Box5Feedback.qml</file>
+        <file>Box6Goal.qml</file>
+        <file>Box7Interference.qml</file>
+        <file>Box10GameFeedback.qml</file>
+        <file>Box11Goodbye.qml</file>
+        <file>MainBox1.qml</file>
+        <file>MainBox2.qml</file>
+        <file>Box8Dialogue.qml</file>
+        <file>Box9Feedback.qml</file>
     </qresource>
 </RCC>

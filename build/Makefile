@@ -629,12 +629,25 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_qml.cpp
 qrc_qml.cpp: ../qml.qrc \
 		/home/yadollah/Qt/5.11.1/gcc_64/bin/rcc \
+		../Box7Interference.qml \
+		../Box5Feedback.qml \
+		../Box4Dialogue.qml \
+		../Box8Dialogue.qml \
+		../Box9Feedback.qml \
+		../ControlRow.qml \
+		../Box3Instruction.qml \
+		../Box2Practice.qml \
+		../Box10GameFeedback.qml \
+		../ActionButton.qml \
+		../Box11Goodbye.qml \
+		../Box6Goal.qml \
+		../MainBox1.qml \
 		../main.cpp \
 		../ControlArea.qml \
-		../ControlColumn.qml \
-		../ControlRow.qml \
+		../Box1Introduction.qml \
 		../main.qml \
-		../ActionButton.qml \
+		../MainBox2.qml \
+		../ControlColumn.qml \
 		../shared/ImageBoxBody.qml \
 		../shared/CircleBody.qml \
 		../shared/PolygonBody.qml \

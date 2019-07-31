@@ -162,6 +162,117 @@ Rectangle {
                                     "30", "40", "50", "60", "70", "80", "90",
                                     "100", "200", "300", "400", "500"]
 
+    property variant introductionText:  [   "SETUP , crianca_instrucao",
+                                            "INTRODUCTION , Ola",
+
+                                            "RANDOMIZE , ",
+                                            "COLLECT , "]
+
+    property variant practiceText:  [
+        "LEVEL , FACIL",
+        "GOAL , E1",
+        "GOAL , E2",
+        ]
+
+    property variant instructionText:  [
+
+
+        "LEVEL , MEDIO",
+        "STAT , Estou pronto",
+
+        "COLOR , amarelo",
+        "COLOR , vermelho",
+
+        "OBJECT , circulo",
+        "OBJECT , quadrado",
+
+        "DIREC , a minha ESQUERDA",
+        "DIREC , a minha DIREITA",
+
+        "DIREC , a tua ESQUERDA",
+        "DIREC , a tua DIREITA",
+
+        "DIREC , a ESQUERDA",
+        "DIREC , a DIREITA",
+
+        "VAZIO , ",
+
+
+        ]
+
+    property variant dialogueText:  [
+        "STAT , Que cor?",
+        //"STAT , Quantos?",
+        "STAT , Que objecto?",
+        "STAT , Em que direccao?",
+        "RESULT , YES"
+        ]
+
+    property variant feedbackText:  [
+        "STAT , Acho que atingi o objectivo",
+        "STAT , Não consigo advinhar",
+        "STAT , Agora é a minha vez ",
+        ]
+
+    property variant goalText:  [
+        //"GOAL , E1",
+        //"GOAL , E2",
+        "SETUP , robot_instrucao",
+        "GOAL , M1",
+        "GOAL , M2",
+        "GOAL , M3",
+        "GOAL , M4",
+        "GOAL , M5",
+        "GOAL , M6",
+        //"GOAL , M7",
+        //"GOAL , M8"
+        ]
+
+    property variant interferenceText: [
+        "REPEAT , Repeat",
+        "CLARIFY , Clarify",
+        "STOP , Pare"]
+
+    property variant dialogue2Text: [
+        "STAT , queres que repita?",
+        "STAT , acabaste?",
+        "STAT , claro que sim!",
+        "STAT , Sim",
+        "STAT , Não",
+    ]
+
+    property variant feedback2Text: [
+        "RESULT , Correct",
+        "RESULT , Wrong",
+    ]
+
+    property variant gameFeedbackText: [
+        "STAT , acho que ganhei",
+        "STAT , acho que perdi",
+
+        //"EMOTION , Happy",
+        //"EMOTION , Sad",
+    ]
+
+    property variant goodbyeText: [
+        "GOODBYE , ",
+    ]
+
+
+    property variant title: [  "Child_Instruct_pt",
+                                "Robot_Instruct_pt",
+                                "Introduction",
+                                "Practice",
+                                "Instruction",
+                                "Dialogue",
+                                "Feedback",
+                                "Goal",
+                                "Interference",
+                                "Dialogue2",
+                                "Feedback2",
+                                "GameFeedback",
+                                "Goodbye"]
+
     function counterLevel(rowCn){
         console.log("width", controlArea.width);
         console.log("height", controlArea.height);
@@ -174,17 +285,16 @@ Rectangle {
     }
 
 
-
-    ControlRow {
-        id: top_row
+    MainBox1{
+        id: mainBox1
         box_index: 0
 
         color: 'transparent'
 
         //x: 0
         //y: 0
-        width: controlArea.width - 20
-        height: controlArea.height/(nbRows)-10
+        //width: controlArea.width/4 - 20
+        //height: controlArea.height/3 - 10
 
         nbButtons: 10
         gridRow: 15
@@ -193,17 +303,15 @@ Rectangle {
         buttonWidth: recwidth * 1/5
         buttonHeight: recheight * 1/12
         titleHeight: recheight * 1/12
+        titles: title
 
-        red: 0.41
-        green:0.41
-        blue: 0.41
     }
 
-    ControlColumn{
-        id: bottom_row
+    MainBox2{
+        id: mainBox2
         box_index: 1
-        color: 'transparent'
 
+        color: 'transparent'
         //x:0
         //y: controlArea.height/(nbRows)
         width:  controlArea.width - 20
@@ -217,10 +325,347 @@ Rectangle {
         buttonHeight: recheight * 1/12
         titleHeight: recheight * 1/12
 
-        red: 0.18
-        green:0.3
-        blue: 0.3
+        titles: title
+
     }
+
+
+
+    Box1Introduction{
+        id: introductionBox
+        box_index: 2
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: introductionText
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+    Box2Practice{
+        id: practiceBox
+        box_index: 3
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: practiceText
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+    Box3Instruction{
+        id: instructionBox
+        box_index: 4
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 15
+        gridRow: 15
+        gridColumn: 3
+        texMex: instructionText
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+    }
+
+    Box4Dialogue{
+        id: dialogueBox
+        box_index: 5
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: dialogueText
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+    Box5Feedback{
+        id: feedbackBox
+        box_index: 6
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: feedbackText
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+    Box6Goal{
+        id: goalBox
+        box_index: 7
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: goalText
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+    Box7Interference{
+        id: interferenceBox
+        box_index: 8
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: interferenceText
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+    Box8Dialogue{
+        id: dialogueBox2
+        box_index: 9
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: dialogue2Text
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+    Box9Feedback{
+        id: feedbackBox2
+        box_index: 10
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: feedback2Text
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+    Box10GameFeedback{
+        id: gameFeedbackBox
+        box_index: 11
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: gameFeedbackText
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+    Box11Goodbye{
+        id: goodbyeBox
+        box_index: 12
+
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: goodbyeText
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+
+
+
+
+//    ControlRow {
+//        id: top_row
+//        box_index: 0
+
+//        color: 'transparent'
+
+//        //x: 0
+//        //y: 0
+//        width: controlArea.width - 20
+//        height: controlArea.height/(nbRows)-10
+
+//        nbButtons: 10
+//        gridRow: 15
+//        gridColumn: 3
+//        texMex: speakingText
+//        buttonWidth: recwidth * 1/5
+//        buttonHeight: recheight * 1/12
+//        titleHeight: recheight * 1/12
+
+//        red: 0.41
+//        green:0.41
+//        blue: 0.41
+//    }
+
+//    ControlColumn{
+//        id: bottom_row
+//        box_index: 1
+//        color: 'transparent'
+
+//        //x:0
+//        //y: controlArea.height/(nbRows)
+//        width:  controlArea.width - 20
+//        height: controlArea.height/(nbRows) - 10
+
+//        nbButtons: 10
+//        gridRow: 15
+//        gridColumn: 3
+//        texMex: movementText
+//        buttonWidth: recwidth * 1/5
+//        buttonHeight: recheight * 1/12
+//        titleHeight: recheight * 1/12
+
+//        red: 0.18
+//        green:0.3
+//        blue: 0.3
+//    }
 
 
 }
