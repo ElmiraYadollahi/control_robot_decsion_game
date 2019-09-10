@@ -203,6 +203,7 @@ DIST          = /home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/spec_post.prf \
+		../.qmake.stash \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -383,6 +384,7 @@ Makefile: ../qml_control_robot_decision_game_v2_por.pro /home/yadollah/Qt/5.11.1
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -559,6 +561,7 @@ Makefile: ../qml_control_robot_decision_game_v2_por.pro /home/yadollah/Qt/5.11.1
 /home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/qt_config.prf:
 /home/yadollah/Qt/5.11.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/toolchain.prf:
 /home/yadollah/Qt/5.11.1/gcc_64/mkspecs/features/default_pre.prf:
