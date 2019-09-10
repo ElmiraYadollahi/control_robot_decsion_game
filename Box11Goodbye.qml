@@ -127,9 +127,9 @@ Rectangle {
     Rectangle {
         id: borderRec
         //y:this_row.height *index + rectangleBox.height * 1/12
-        x: controlArea.width *(3/40) + 2 *introductionBox.width
+        x: controlArea.width *(7/80) + 3 *introductionBox.width
         y: controlArea.height *(11/20) + dialogueBox.height + controlArea.height *(1/40)
-        width: introductionBox.width
+        width: introductionBox.width/2
         height: introductionBox.height
         border.width : 7
         border.color : "#000000"
@@ -154,7 +154,7 @@ Rectangle {
 
         Grid{
             spacing: 5
-            x: titleHeight * 4/5
+            x: titleHeight * 3/5
             y: titleHeight * 5/4
             rows: 1; columns: 1
             Repeater{
@@ -162,7 +162,7 @@ Rectangle {
                 model:1
                 ActionButton{
                     id: row7n
-                    width: buttonWidth
+                    width: buttonWidth/2
                     height: buttonHeight
                     color: colorSelection(index, red, green, blue)
                     hoverColor: hoverColorSelection(index, red, green, blue)

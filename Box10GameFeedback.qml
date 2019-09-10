@@ -29,7 +29,7 @@ Rectangle {
     function colorSelection(ind, red, green, blue){
         if (box_index >0){
 
-            if (ind === 27  | ind === 16 | ind === 24 | ind === 32 ){
+            if (ind === 1  | ind === 16 | ind === 24 | ind === 32 ){
                 return('red')
             }
             else if (ind === 26 | ind === 14){
@@ -39,8 +39,8 @@ Rectangle {
                 return('#006400')
             }
 
-            else if (ind === 2 | ind === 3){
-                return('#808000')
+            else if (ind === 0 | ind === 3){
+                return('#008000')
             }
             else if (ind >= 17 & ind <= 22){
                 return('#808000')
@@ -127,7 +127,7 @@ Rectangle {
     Rectangle {
         id: borderRec
         //y:this_row.height *index + rectangleBox.height * 1/12
-        x: controlArea.width *(2/40) + introductionBox.width
+        x: controlArea.width *(3/40) + 2 *introductionBox.width
         y: controlArea.height *(11/20) + dialogueBox.height + controlArea.height *(1/40)
         width: introductionBox.width
         height: introductionBox.height

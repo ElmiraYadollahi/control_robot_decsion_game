@@ -176,7 +176,7 @@ Rectangle {
 
     property variant instructionText:  [
 
-
+        "LEVEL , FACIL",
         "LEVEL , MEDIO",
         "STAT , Estou pronto",
 
@@ -196,6 +196,8 @@ Rectangle {
         "DIREC , a DIREITA",
 
         "VAZIO , ",
+        "RESULT , Boa",
+        "RESULT , Mas"
 
 
         ]
@@ -214,16 +216,27 @@ Rectangle {
         "STAT , Agora é a minha vez ",
         ]
 
-    property variant goalText:  [
+    property variant conditionText:  [
         //"GOAL , E1",
         //"GOAL , E2",
         "SETUP , robot_instrucao",
+        "CONDITION , Ambiguous",
+        "CONDITION , Egocentric",
+        "CONDITION , Addressee-centric"
+
+        //"GOAL , M7",
+        //"GOAL , M8"
+        ]
+
+    property variant goalText:  [
+        //"GOAL , E1",
+        //"GOAL , E2",
         "GOAL , M1",
         "GOAL , M2",
         "GOAL , M3",
         "GOAL , M4",
         "GOAL , M5",
-        "GOAL , M6",
+        "GOAL , M6"
         //"GOAL , M7",
         //"GOAL , M8"
         ]
@@ -231,7 +244,10 @@ Rectangle {
     property variant interferenceText: [
         "REPEAT , Repeat",
         "CLARIFY , Clarify",
-        "STOP , Pare"]
+        "STOP , Pare",
+        "RANDOMIZE , ",
+        "COLLECT , ",
+    ]
 
     property variant dialogue2Text: [
         "STAT , queres que repita?",
@@ -239,6 +255,7 @@ Rectangle {
         "STAT , claro que sim!",
         "STAT , Sim",
         "STAT , Não",
+        "STAT , Você está perto"
     ]
 
     property variant feedback2Text: [
@@ -271,7 +288,8 @@ Rectangle {
                                 "Dialogue2",
                                 "Feedback2",
                                 "GameFeedback",
-                                "Goodbye"]
+                                "Goodbye",
+                                "Condition"]
 
     function counterLevel(rowCn){
         console.log("width", controlArea.width);
@@ -449,6 +467,31 @@ Rectangle {
         gridRow: 15
         gridColumn: 3
         texMex: feedbackText
+        buttonWidth: recwidth * 1/5
+        buttonHeight: recheight * 1/12
+        titleHeight: recheight * 1/12
+        titles: title
+
+        red: 0.41
+        green:0.41
+        blue: 0.41
+
+    }
+
+    Box65Goal{
+        id: conditionBox
+        box_index: 13
+        color: 'transparent'
+
+        //x: 0
+        //y: 0
+        width: controlArea.width/4
+        height: controlArea.height/5
+
+        nbButtons: 10
+        gridRow: 15
+        gridColumn: 3
+        texMex: conditionText
         buttonWidth: recwidth * 1/5
         buttonHeight: recheight * 1/12
         titleHeight: recheight * 1/12

@@ -39,6 +39,9 @@ Rectangle {
             else if (ind === 1){
                 return('#008000')
             }
+            else if (ind === 3 | ind === 4){
+                return('#9370db')
+            }
 
             else {
                 return(Qt.rgba(red - ind * 0.02, green - ind * 0.02, blue - ind * 0.02, 1))
@@ -113,7 +116,7 @@ Rectangle {
         x: controlArea.width *(2/40) + introductionBox.width
         y: controlArea.height *(11/20)
         width: introductionBox.width
-        height: introductionBox.height
+        height: introductionBox.height * 1.3
         border.width : 7
         border.color : "#A9A9A9"
         color: 'transparent'
@@ -151,6 +154,29 @@ Rectangle {
                     hoverColor: hoverColorSelection(index, red, green, blue)
                     pressColor: pressColorSelection(index, red, green, blue)
                     buttonText: texMex [index]
+                    columnNum: box_index
+                    columnTitle: titles
+                    title: titles[box_index]
+                }
+            }
+        }
+
+        Grid{
+            spacing: 5
+            x: titleHeight * 4/5
+            y: titleHeight * 9/2 + 10
+            rows: 1; columns: 2
+            Repeater{
+                id: row6
+                model:2
+                ActionButton{
+                    id: row6n
+                    width: buttonWidth/2
+                    height: buttonHeight * 0.9
+                    color: colorSelection(index+3, red, green, blue)
+                    hoverColor: hoverColorSelection(index+3, red, green, blue)
+                    pressColor: pressColorSelection(index+3, red, green, blue)
+                    buttonText: texMex [index+3]
                     columnNum: box_index
                     columnTitle: titles
                     title: titles[box_index]

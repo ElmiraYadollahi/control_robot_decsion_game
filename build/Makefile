@@ -629,6 +629,7 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_qml.cpp
 qrc_qml.cpp: ../qml.qrc \
 		/home/yadollah/Qt/5.11.1/gcc_64/bin/rcc \
+		../Box65Goal.qml \
 		../Box7Interference.qml \
 		../Box5Feedback.qml \
 		../Box4Dialogue.qml \

@@ -27,11 +27,15 @@ Item {
     onClicked:{
         //button_contentPublisher.text = '' + buttonText
         //console.log(title)
-        if (title === "Child_Instruct_pt" | title === "Introduction" | title === "Practice" | title === "Dialogue" | title === "Feedback" | title === "Instruction"){
+        if (title === "Child_Instruct_pt" | title === "Introduction"  | title === "Dialogue" | title === "Feedback" | title === "Instruction"){
             button_clickedPublisher.text = 'true'
             button_childTurnPublisher.text = '' + "Child_Instruct_pt" + ' , ' + buttonText
         }
-        if (title === "Robot_Instruct_pt" | title === "Goal" | title === "Interference" | title === "Dialogue2" | title === "Feedback2" | title ==="game"){
+        if (title === "Practice"){
+            button_clickedPublisher.text = 'true'
+            button_childTurnPublisher.text = '' + "Robot_Instruct_pt" + ' , ' + buttonText
+        }
+        if (title === "Robot_Instruct_pt" | title === "Goal" | title === "Condition" | title === "Interference" | title === "Dialogue2" | title === "Feedback2" | title ==="game"| title ==="Goodbye" | title === "GameFeedback"){
             button_clickedPublisher.text = 'true'
             button_robotTurnPublisher.text = '' + "Robot_Instruct_pt" + ' , ' + buttonText
         }

@@ -36,5 +36,6 @@
         <file>MainBox2.qml</file>
         <file>Box8Dialogue.qml</file>
         <file>Box9Feedback.qml</file>
+        <file>Box65Goal.qml</file>
     </qresource>
 </RCC>

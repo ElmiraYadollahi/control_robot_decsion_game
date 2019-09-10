@@ -32,7 +32,8 @@ Rectangle {
             if (ind === 33){
                 return('#778899')
             }
-            else if (ind > 0 & ind < 7){
+
+            else if (ind >= 0 & ind < 9){
                 return('#808000')
             }
             else {
@@ -106,9 +107,9 @@ Rectangle {
         id: borderRec
         //y:this_row.height *index + rectangleBox.height * 1/12
         x: controlArea.width *(1/30)
-        y: controlArea.height *(11/20)
+        y: controlArea.height *(11/20) + dialogueBox.height + controlArea.height *(4/80)
         width: introductionBox.width
-        height: introductionBox.height  * 1.2
+        height: introductionBox.height * 0.9
         border.width : 7
         border.color : "#C0C0C0"
         color: 'transparent'
@@ -129,33 +130,11 @@ Rectangle {
                 color: 'white'
             }
         }
-        Grid{
-            spacing: 5
-            x: titleHeight * 4/5
-            y: titleHeight
-            rows: 1; columns: 1
-            Repeater{
-                id: row1
-                model:1
-                ActionButton{
-                    id: row1n
-                    width: buttonWidth
-                    height: buttonHeight
-                    color: colorSelection(index, red, green, blue)
-                    hoverColor: hoverColorSelection(index, red, green, blue)
-                    pressColor: pressColorSelection(index, red, green, blue)
-                    buttonText: texMex [index]
-                    columnNum: box_index
-                    columnTitle: titles
-                    title: titles[box_index]
-                }
-            }
-        }
 
         Grid{
-            spacing: 5
+            spacing: 2
             x: titleHeight * 1/3
-            y: titleHeight * 2 + 10
+            y: titleHeight
             rows: 3; columns: 2
             Repeater{
                 id: row7
@@ -164,10 +143,10 @@ Rectangle {
                     id: row7n
                     width: buttonWidth * 3/5
                     height: buttonHeight
-                    color: colorSelection(index+1, red, green, blue)
-                    hoverColor: hoverColorSelection(index+1, red, green, blue)
-                    pressColor: pressColorSelection(index+1, red, green, blue)
-                    buttonText: texMex [index+1]
+                    color: colorSelection(index, red, green, blue)
+                    hoverColor: hoverColorSelection(index, red, green, blue)
+                    pressColor: pressColorSelection(index, red, green, blue)
+                    buttonText: texMex [index]
                     columnNum: box_index
                     columnTitle: titles
                     title: titles[box_index]

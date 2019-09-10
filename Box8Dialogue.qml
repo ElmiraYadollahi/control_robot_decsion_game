@@ -138,7 +138,7 @@ Rectangle {
             rows: 3; columns: 2
             Repeater{
                 id: row7
-                model:5
+                model:6
                 ActionButton{
                     id: row7n
                     width: buttonWidth * 0.94

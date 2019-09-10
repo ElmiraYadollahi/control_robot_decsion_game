@@ -29,33 +29,13 @@ Rectangle {
     function colorSelection(ind, red, green, blue){
         if (box_index >0){
 
-            if (ind === 1  | ind === 16 | ind === 24 | ind === 32 ){
-                return('red')
-            }
-            else if (ind === 26 | ind === 14){
-                return('#ffa600')
-            }
-            else if (ind === 25 | ind === 23 | ind === 15 ){
-                return('#006400')
+            if (ind === 33){
+                return('#778899')
             }
 
-            else if (ind === 0 | ind === 3){
-                return('#008000')
-            }
-            else if (ind >= 17 & ind <= 22){
-                return('#808000')
-            }
-            else if (ind === 12 | ind === 13){
-                return('#00008b')
-            }
-            else if (ind === 29 | ind === 31){
-                return('#7b68ee')
-            }
-            else if (ind === 28 | ind === 30){
-                return('#fa8072')
-            }
-            else if (ind === 33){
-                return('#778899')
+
+            else if (ind > 0 & ind < 9){
+                return('#ff7f50')
             }
             else {
                 return(Qt.rgba(red - ind * 0.02, green - ind * 0.02, blue - ind * 0.02, 1))
@@ -127,12 +107,12 @@ Rectangle {
     Rectangle {
         id: borderRec
         //y:this_row.height *index + rectangleBox.height * 1/12
-        x: controlArea.width *(2/40) + introductionBox.width
-        y: controlArea.height *(11/20) + dialogueBox.height + controlArea.height *(7/80)
+        x: controlArea.width *(1/30)
+        y: controlArea.height *(11/20)
         width: introductionBox.width
-        height: introductionBox.height * 0.7
+        height: introductionBox.height  * 1.2
         border.width : 7
-        border.color : "#696969"
+        border.color : "#C0C0C0"
         color: 'transparent'
 
         Rectangle{
@@ -140,7 +120,7 @@ Rectangle {
             width: borderRec.width
             height: titleHeight * 0.7
             //color: Qt.rgba(red - 1 * 0.02, green - 1 * 0.02, blue - 1 * 0.02, 1)
-            color: '#696969'
+            color: '#C0C0C0'
 
             Text {
                 x: title.width/2 -width/2
@@ -151,23 +131,46 @@ Rectangle {
                 color: 'white'
             }
         }
-
         Grid{
             spacing: 5
             x: titleHeight * 4/5
-            y: titleHeight * 1
-            rows: 2; columns: 1
+            y: titleHeight * 0.9
+            rows: 1; columns: 1
             Repeater{
-                id: row7
-                model:2
+                id: row1
+                model:1
                 ActionButton{
-                    id: row7n
+                    id: row1n
                     width: buttonWidth
                     height: buttonHeight
                     color: colorSelection(index, red, green, blue)
                     hoverColor: hoverColorSelection(index, red, green, blue)
                     pressColor: pressColorSelection(index, red, green, blue)
                     buttonText: texMex [index]
+                    columnNum: box_index
+                    columnTitle: titles
+                    title: titles[box_index]
+                }
+            }
+        }
+
+
+        Grid{
+            spacing: 2
+            x: titleHeight * 4/5
+            y: titleHeight * 2 + 5
+            rows: 3; columns: 1
+            Repeater{
+                id: row7
+                model:3
+                ActionButton{
+                    id: row7n
+                    width: buttonWidth
+                    height: buttonHeight
+                    color: colorSelection(index+1, red, green, blue)
+                    hoverColor: hoverColorSelection(index+1, red, green, blue)
+                    pressColor: pressColorSelection(index+1, red, green, blue)
+                    buttonText: texMex [index+1]
                     columnNum: box_index
                     columnTitle: titles
                     title: titles[box_index]
